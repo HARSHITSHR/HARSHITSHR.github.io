@@ -27,7 +27,7 @@ const Clients = () => {
           {clients.map((client, index) => (
             <div
               key={index}
-              className="bg-card rounded-xl border border-border p-6 flex items-center justify-center text-center hover:shadow-lg hover:border-primary/50 transition-all duration-300"
+              className="bg-gradient-to-br from-card via-primary/5 to-card rounded-xl border border-primary/20 p-6 flex items-center justify-center text-center hover:shadow-lg hover:border-primary/50 hover:from-primary/10 hover:to-primary/5 transition-all duration-300"
             >
               <p className="text-sm font-medium text-foreground">{client}</p>
             </div>

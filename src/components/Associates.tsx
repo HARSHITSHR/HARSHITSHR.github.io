@@ -26,9 +26,11 @@ const Associates = () => {
           {associates.map((associate, index) => (
             <div
               key={index}
-              className="flex items-center gap-3 bg-card rounded-xl border border-border p-4 hover:shadow-lg hover:border-primary/50 transition-all duration-300"
+              className="flex items-center gap-3 bg-gradient-to-r from-card to-primary/5 rounded-xl border border-primary/20 p-4 hover:shadow-lg hover:border-primary/50 hover:to-primary/10 transition-all duration-300"
             >
-              <Building2 className="h-5 w-5 text-primary flex-shrink-0" />
+              <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Building2 className="h-5 w-5 text-primary" />
+              </div>
               <p className="text-sm font-medium text-foreground">{associate}</p>
             </div>
           ))}

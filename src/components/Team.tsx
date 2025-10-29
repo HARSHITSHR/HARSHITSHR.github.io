@@ -28,10 +28,10 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl border border-border p-8 text-center hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-to-br from-primary/5 via-card to-primary/5 rounded-2xl border border-primary/20 p-8 text-center hover:shadow-lg hover:border-primary/40 transition-all duration-300"
             >
               <div className="mb-6 flex justify-center">
-                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/30 flex items-center justify-center shadow-lg">
                   <Users className="h-10 w-10 text-primary" />
                 </div>
               </div>
