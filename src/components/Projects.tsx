@@ -136,13 +136,17 @@ const Projects = () => {
               {/* Category Header */}
               <button
                 onClick={() => toggleCategory(category.id)}
-                className="w-full px-6 py-5 flex items-center justify-between hover:bg-secondary/50 transition-colors"
+                className={`w-full px-6 py-5 flex items-center justify-between transition-all duration-300 ${
+                  expandedCategory === category.id
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-gradient-to-r from-primary/5 to-primary/10 hover:from-primary/10 hover:to-primary/20"
+                }`}
               >
-                <h3 className="text-xl font-semibold text-foreground">
+                <h3 className="text-xl font-semibold">
                   {category.title}
                 </h3>
                 <ChevronRight
-                  className={`h-6 w-6 text-muted-foreground transition-transform ${
+                  className={`h-6 w-6 transition-transform duration-300 ${
                     expandedCategory === category.id ? "rotate-90" : ""
                   }`}
                 />
