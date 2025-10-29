@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-background to-secondary/30 pt-20"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-card to-secondary/50 pt-20"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700">

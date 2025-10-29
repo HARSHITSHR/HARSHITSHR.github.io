@@ -118,7 +118,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-24 bg-background">
+    <section id="projects" className="py-24 bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Projects</h2>
@@ -139,7 +139,7 @@ const Projects = () => {
                 className={`w-full px-6 py-5 flex items-center justify-between transition-all duration-300 ${
                   expandedCategory === category.id
                     ? "bg-primary text-primary-foreground"
-                    : "bg-gradient-to-r from-primary/5 to-primary/10 hover:from-primary/10 hover:to-primary/20"
+                    : "bg-gradient-to-r from-primary/20 to-accent/25 hover:from-primary/30 hover:to-accent/35"
                 }`}
               >
                 <h3 className="text-xl font-semibold">
@@ -175,7 +175,7 @@ const Projects = () => {
                       {category.projects.map((project, index) => (
                         <div
                           key={index}
-                          className="flex-shrink-0 w-72 bg-secondary/50 rounded-xl border border-border p-6 hover:shadow-lg hover:border-primary/50 transition-all duration-300"
+                          className="flex-shrink-0 w-72 bg-gradient-to-br from-card to-secondary/70 rounded-xl border border-primary/30 p-6 hover:shadow-lg hover:border-primary/60 transition-all duration-300"
                         >
                           <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
                             <span className="text-muted-foreground text-sm">Project Image</span>

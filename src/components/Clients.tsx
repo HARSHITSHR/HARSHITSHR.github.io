@@ -14,7 +14,7 @@ const Clients = () => {
   ];
 
   return (
-    <section id="clients" className="py-24 bg-background">
+    <section id="clients" className="py-24 bg-card">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Clients</h2>
@@ -27,7 +27,7 @@ const Clients = () => {
           {clients.map((client, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-card via-primary/5 to-card rounded-xl border border-primary/20 p-6 flex items-center justify-center text-center hover:shadow-lg hover:border-primary/50 hover:from-primary/10 hover:to-primary/5 transition-all duration-300"
+              className="bg-gradient-to-br from-card via-primary/20 to-accent/15 rounded-xl border border-primary/30 p-6 flex items-center justify-center text-center hover:shadow-lg hover:border-primary/60 hover:from-primary/25 hover:to-accent/20 transition-all duration-300"
             >
               <p className="text-sm font-medium text-foreground">{client}</p>
             </div>

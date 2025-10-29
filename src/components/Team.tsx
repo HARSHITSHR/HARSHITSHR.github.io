@@ -16,7 +16,7 @@ const Team = () => {
   ];
 
   return (
-    <section id="team" className="py-24 bg-secondary/30">
+    <section id="team" className="py-24 bg-secondary/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
@@ -28,10 +28,10 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-primary/5 via-card to-primary/5 rounded-2xl border border-primary/20 p-8 text-center hover:shadow-lg hover:border-primary/40 transition-all duration-300"
+              className="bg-gradient-to-br from-primary/15 via-card to-accent/15 rounded-2xl border border-primary/30 p-8 text-center hover:shadow-lg hover:border-primary/50 transition-all duration-300"
             >
               <div className="mb-6 flex justify-center">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/30 flex items-center justify-center shadow-lg">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/30 to-accent/40 flex items-center justify-center shadow-lg">
                   <Users className="h-10 w-10 text-primary" />
                 </div>
               </div>

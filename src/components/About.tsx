@@ -9,7 +9,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-background">
+    <section id="about" className="py-24 bg-card">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">About Us</h2>
@@ -23,7 +23,7 @@ const About = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex items-start gap-4 p-6 bg-card rounded-2xl border border-border hover:shadow-lg transition-all duration-300"
+              className="flex items-start gap-4 p-6 bg-gradient-to-br from-card to-primary/10 rounded-2xl border border-primary/30 hover:shadow-lg hover:border-primary/50 transition-all duration-300"
             >
               <div className="flex-shrink-0 mt-1">
                 <CheckCircle className="h-6 w-6 text-primary" />
