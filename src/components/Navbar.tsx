@@ -47,15 +47,15 @@ const Navbar = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-foreground shadow-2xl"
-          : "bg-foreground/95"
+          ? "bg-[hsl(var(--navbar))] shadow-lg"
+  : "bg-[hsl(var(--navbar))]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo and Brand */}
           <motion.div 
-            className="flex items-center gap-3 cursor-pointer group" 
+            className="flex items-center gap-3 cursor-pointer group h-28"
             onClick={() => scrollToSection("hero")}
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400 }}
@@ -63,13 +63,13 @@ const Navbar = () => {
             <img 
               src={logo} 
               alt="RVD Logo" 
-              className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              className="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
             />
             <div className="hidden sm:flex flex-col">
-              <h2 className="text-lg font-bold text-primary-foreground leading-tight tracking-wide">
+              <h2 className="text-lg font-bold text-foreground leading-tight tracking-wide">
                 R.V. Desai
               </h2>
-              <p className="text-xs text-primary-foreground/70 leading-tight uppercase tracking-widest">
+              <p className="text-xs text-foreground/70 leading-tight uppercase tracking-widest">
                 Design MEPF & PMC
               </p>
             </div>
@@ -81,7 +81,7 @@ const Navbar = () => {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-accent transition-colors duration-300 uppercase tracking-wider"
+                className="relative px-4 py-2 text-sm font-medium text-foreground/80 hover:text-accent transition-colors duration-300 uppercase tracking-wider"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -96,7 +96,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-primary-foreground hover:bg-primary-foreground/10 transition-colors"
+            className="lg:hidden p-2 rounded-lg text-foreground hover:bg-primary-foreground/10 transition-colors"
             whileTap={{ scale: 0.95 }}
           >
             {isMobileMenuOpen ? (

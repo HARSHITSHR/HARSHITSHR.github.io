@@ -20,13 +20,53 @@ const Projects = () => {
 
   const categories: ProjectCategory[] = [
     {
+      title: "Residential",
+      id: "residential",
+      icon: "🏠",
+      projects: [
+        { title: "AdityaRaj Amrut (Ghatkopar)",
+          image: "/src/assets/projects/adityarajamrut.jpg",
+         },
+        { title: "AdityaRaj Vidya Darshan",
+          image: "/src/assets/projects/adityarajVidyaDarshan.jpg",
+         },
+        { title: "Sai AdityaRaj (Ghatkopar)",
+          image: "/src/assets/projects/saiadityaraj.jpg",
+         },
+        { title: "AdityaRaj Square (Vikhroli)",
+          image: "/src/assets/projects/adityarajamrut.jpg",
+         },
+        { title: "AdityaRaj Mangaldeep",
+          image: "/src/assets/projects/AdityaRaj Mangaldeep.jpg",
+         },
+        { title: "AdityaRaj Avenue (Vikhroli)",
+          image: "/src/assets/projects/Avenue.jpeg",
+         },
+        { title: "AdityaRaj Central",
+          image: "/src/assets/projects/adityarajcentral.jpg",
+         },
+        { title: "AdityaRaj Enclave",
+          image: "/src/assets/projects/enclave1.jpg",
+         },
+        { title: "AdityaRaj Breeze (Vikhroli)",
+          image: "/src/assets/projects/Breeze.jpeg",
+         },
+        { title: "Raj Mittal Bungalow" },
+        { title: "Dr. Mishra Bungalow (Alibaug)" },
+      ],
+    },
+    {
       title: "Hotels",
       id: "hotels",
       icon: "🏨",
       projects: [
         { title: "Hotel Benin (West Africa)" },
-        { title: "Hotel Ginger (Vizag)" },
-        { title: "Hotel Ginger (Sambhaji Nagar)" },
+        { title: "Hotel Ginger (Vizag)",
+          image: "/src/assets/projects/ginger-visakhapatnam.jpg",
+         },
+        { title: "Hotel Ginger (Sambhaji Nagar)",
+          image: "/src/assets/projects/ginger sam.png",
+         },
         { title: "Hotel MASA (Mumbai)" },
         { title: "Della Villas (Lonavala)" },
         { title: "Theme Park Project (Qatar)" },
@@ -37,31 +77,22 @@ const Projects = () => {
       id: "restaurants",
       icon: "🍽️",
       projects: [
-        { title: "Cafe 212 (Mumbai)" },
+        { title: "Cafe 212 (Mumbai)",
+          image: "/src/assets/projects/cafe-212.png",
+         },
         { title: "Apple Restaurant (Navi Mumbai)" },
-        { title: "Shizusan (Mumbai)" },
-        { title: "India Bistro (Mumbai)" },
-        { title: "Glocal Restaurant (Bengaluru)" },
+        { title: "Shizusan (Mumbai)",
+          image: "/src/assets/projects/shizusan.jpg",
+         },
+        { title: "India Bistro (Mumbai)",
+          image: "/src/assets/projects/india-bistro.jpg",
+         },
+        { title: "Glocal Restaurant (Bengaluru)",
+          image: "/src/assets/projects/glocal.jpg",
+         },
       ],
     },
-    {
-      title: "Residential",
-      id: "residential",
-      icon: "🏠",
-      projects: [
-        { title: "AdityaRaj Amrut (Ghatkopar)" },
-        { title: "AdityaRaj Vidya Darshan" },
-        { title: "Sai AdityaRaj (Ghatkopar)" },
-        { title: "AdityaRaj Square (Vikhroli)" },
-        { title: "AdityaRaj Mangaldeep" },
-        { title: "AdityaRaj Avenue (Vikhroli)" },
-        { title: "AdityaRaj Central" },
-        { title: "AdityaRaj Enclave" },
-        { title: "AdityaRaj Breeze (Vikhroli)" },
-        { title: "Raj Mittal Bungalow" },
-        { title: "Dr. Mishra Bungalow (Alibaug)" },
-      ],
-    },
+    
     {
       title: "Commercial",
       id: "commercial",
@@ -181,25 +212,29 @@ const Projects = () => {
                 >
                   <div className="relative bg-foreground rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
                     {/* Project Image Placeholder */}
-                    <div className="aspect-[4/3] bg-gradient-to-br from-primary/30 to-accent/30 flex items-center justify-center">
-                      <Building2 className="h-16 w-16 text-primary-foreground/50" />
-                    </div>
+                    <div className="aspect-[4/3] bg-muted overflow-hidden">
+  {project.image ? (
+    <img
+      src={project.image}
+      alt={project.title}
+      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+    />
+  ) : (
+    <div className="h-full w-full bg-gradient-to-br from-primary/30 to-accent/30 flex items-center justify-center">
+      <Building2 className="h-16 w-16 text-primary-foreground/50" />
+    </div>
+  )}
+</div>
                     
                     {/* Project Info */}
                     <div className="p-5">
                       <h4 className="font-semibold text-primary-foreground text-lg leading-tight">
                         {project.title}
                       </h4>
-                      <div className="mt-3 flex items-center text-accent text-sm">
-                        <span>View Details</span>
-                        <ChevronRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                      </div>
+                    
                     </div>
                     
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-accent/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <span className="text-accent-foreground font-semibold text-lg">View Project</span>
-                    </div>
+                  
                   </div>
                 </motion.div>
               ))}

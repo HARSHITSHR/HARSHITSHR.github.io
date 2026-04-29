@@ -100,12 +100,7 @@ const Services = () => {
               <p className="text-primary-foreground/60 mb-4 leading-relaxed">
                 {service.description}
               </p>
-              
-              {/* Arrow */}
-              <div className="flex items-center text-accent opacity-0 group-hover:opacity-100 transition-opacity">
-                <span className="text-sm font-medium mr-2">Learn More</span>
-                <ArrowRight className="h-4 w-4" />
-              </div>
+      
               
               {/* Corner Accent */}
               <div className="absolute top-0 right-0 w-12 h-12 overflow-hidden">

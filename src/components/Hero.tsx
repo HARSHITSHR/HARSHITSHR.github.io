@@ -48,18 +48,14 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          {/* Corner Decorations */}
-          <div className="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-accent" />
-          <div className="absolute -top-4 -right-4 w-12 h-12 border-t-2 border-r-2 border-accent" />
-          <div className="absolute -bottom-4 -left-4 w-12 h-12 border-b-2 border-l-2 border-accent" />
-          <div className="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-accent" />
+          
           
           <div className="px-8 sm:px-16 py-12 sm:py-16">
             {/* Logo */}
             <motion.img 
               src={logo}
               alt="RVD Logo"
-              className="h-24 sm:h-32 w-auto mx-auto mb-8"
+              className="h-[20vh] sm:h-[28vh] max-h-[320px] w-auto mx-auto mb-1"
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}

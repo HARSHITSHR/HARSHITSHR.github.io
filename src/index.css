@@ -14,6 +14,10 @@ Color Palette:
 
 @layer base {
   :root {
+    
+    --navbar: 45 30% 96%;
+    --navbar-foreground: 0 0% 13%;
+
     --background: 210 11% 95%;
     --foreground: 0 0% 13%;
     
@@ -91,6 +95,13 @@ Color Palette:
   .bg-dark {
     background-color: hsl(var(--dark));
     color: hsl(var(--dark-foreground));
+  }
+  .bg-navbar {
+    background-color: hsl(var(--navbar));
+  }
+
+  .text-navbar {
+    color: hsl(var(--navbar-foreground));
   }
 }
 
